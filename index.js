@@ -23,13 +23,7 @@ app.use('/', express.static(__dirname + '/portfolio-site'));
 app.get('/*', (req, res, next) => {
     res.sendFile(path.join(__dirname, '/portfolio-site', 'index.html'))
 })
-// app.get('/', (req, res, next) => {
-//     res.send('hello world')
-// });
 
-// app.get('/*', (req, res, next) => {
-//     res.redirect('/')
-// })
 app.listen(port, host, () => {
     console.log(__dirname)
     console.log(`Project Running on port ${port}`);
