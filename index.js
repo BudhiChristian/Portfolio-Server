@@ -19,6 +19,7 @@ angularResources.forEach(resource => {
         res.sendFile(path.join(__dirname, uri, 'index.html'))
     })
 });
+
 app.use('/', express.static(__dirname + '/portfolio-site'));
 app.get('/*', (req, res, next) => {
     res.sendFile(path.join(__dirname, '/portfolio-site', 'index.html'))
